@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row mb-3">
                     <div class="col-12 text-bg-success text-danger">
-                        <h1>Crea la tua lista!!</h1>
+                        <h1>Crea la tua lista delle cose da fare!!</h1>
                     </div>
                 </div>
             </div>
@@ -22,28 +22,24 @@
 
         <main>
             <div class="container">
-                <div class="row">
+                <div class="row mb-3 text-center">
                     <div class="col-6">
-                        <input type="text" v-model.trim="newTodo">
-                        <button @click="addItems(newTodo)">invia</button>
+                        <input type="text" v-model.trim="newTodo" placeholder="cosa devi fare ?">
+                        <button class="mx-3 " @click="addItems(newTodo)">invia</button>
                     </div>
                 </div>
-                <div class="col-6">
-                    <ul>
-                        <li v-for="element in todos">
-                            {{  }}
-                        </li>
-                    </ul>
-
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="">
+                            <li class="list-group-item border border-dark" v-for="element in todos">
+                                {{element.text}}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </main>
-
-
     </div>
-
-    
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
